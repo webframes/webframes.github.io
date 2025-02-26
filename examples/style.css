@@ -1,0 +1,49 @@
+html,body
+{
+	height: 100%;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+	user-select: none;
+}
+
+html
+{
+	display: table;
+	font-family: Arial, sans-serif;
+	font-size: .8em;
+	width: 100%;
+}
+
+body
+{
+	background: url(transparency-dark.svg);
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+}
+
+body::before
+{
+	color: rgba(255,255,255, .75);
+	content: attr(data-type) ", " attr(data-filesize);
+	left: 0;
+	margin-top: -0.5em;
+	position: absolute;
+	speak: none;
+	text-align: center;
+	text-shadow: .175em .175em .2em black;
+	text-transform: lowercase;
+	top: 50%;
+	width: 100%;
+}
+
+img
+{
+	display: inline-block;
+	height: auto;
+	pointer-events: none;
+	position: relative;
+	width: 100%;
+	z-index: 1;
+}
